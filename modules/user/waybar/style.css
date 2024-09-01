@@ -1,0 +1,25 @@
+* {
+    all: unset;
+    font-family: Source Code Pro;
+}
+
+#workspaces button.empty {
+    color: #4e4f5b;
+}
+
+#workspaces button.active {
+    font-weight: bold;
+    color: #5de4c7;
+}
+
+#workspaces button {
+    padding: 0 5px;
+}
+
+window#waybar {
+    background-color: rgba(16, 19, 24, 0.2);
+}
+
+*.module {
+    padding: 0 15px;
+}
