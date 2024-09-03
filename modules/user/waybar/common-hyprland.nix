@@ -13,9 +13,9 @@
 
             # Bar
 
-            modules-left = ["hyprland/workspaces" "hyprland/mode"];
+            modules-left = ["hyprland/workspaces"];
             modules-center = ["bluetooth" "clock" "custom/microphone"];
-            modules-right = ["wireplumber" "memory" "disk" "cpu" "network" "battery"];
+            modules-right = ["wireplumber" "temperature" "memory" "disk" "cpu" "network" "battery"];
 
             # Modules
 
@@ -64,12 +64,18 @@
                 interval = 5;
                 format = "{}% ";
                 max-length = 10;
+                states = {
+                    critical = 85;
+                };
             };
 
             disk = {
                 interval = 120;
-                format = "{percentage_used}% ";
+                format = "{percentage_used}% ";
                 path = "/";
+                states = {
+                    critical = 85;
+                };
             };
 
             cpu = {
@@ -81,6 +87,9 @@
             battery = {
                 format = "{capacity}% {icon}";
                 format-icons = ["" "" "" "" ""];
+                states = {
+                    critical = 15;
+                };
             };
 
             clock = {

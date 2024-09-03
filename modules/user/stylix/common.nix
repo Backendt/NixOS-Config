@@ -11,6 +11,11 @@
                 package = pkgs.jetbrains-mono;
                 name = "JetBrains Mono";
             };
+
+            sansSerif = {
+                package = pkgs.jetbrains-mono;
+                name = "TeX Gyre Heros";
+            };
         };
     };
 }

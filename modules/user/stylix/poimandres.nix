@@ -3,6 +3,7 @@
 {
     imports = [
         ./common.nix
+        ./overrides/poimandres/waybar.nix
         ./overrides/poimandres/neovim.nix
     ];
 
