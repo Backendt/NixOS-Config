@@ -21,6 +21,9 @@
                 sensitivity = 0;
                 accel_profile = "flat";
             };
+
+            # TODO Find a clean way to fix hyprpaper service
+            exec = ["systemctl --user restart hyprpaper"];
         };
     };
 

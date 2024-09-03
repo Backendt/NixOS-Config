@@ -9,7 +9,7 @@
         ];
 
         # Set primary monitor on XWayland
-        exec = "xrandr --output 'DP-1' --primary";
+        exec = ["xrandr --output 'DP-1' --primary"];
     };
 
     home.packages = [ pkgs.xorg.xrandr ];
