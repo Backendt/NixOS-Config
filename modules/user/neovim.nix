@@ -7,7 +7,6 @@
         vimAlias = true;
 
         plugins = with pkgs.vimPlugins; [
-            poimandres-nvim
             lualine-nvim
             {
                 plugin = ale;
@@ -17,11 +16,6 @@
 
         extraLuaConfig = ''
             require('lualine').setup()
-            require('poimandres').setup {
-                disable_background = true,
-            }
-
-            vim.cmd('colorscheme poimandres')
         '';
 
         extraConfig = ''
