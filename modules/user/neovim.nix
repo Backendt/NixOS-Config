@@ -12,6 +12,10 @@
                 plugin = ale;
                 config = "let g:ale_completion_enabled = 1";
             }
+            {
+                plugin = vim-hexokinase;
+                config = "let g:Hexokinase_highlighters = ['virtual']";
+            }
         ];
 
         extraLuaConfig = ''
