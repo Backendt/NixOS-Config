@@ -1,16 +1,18 @@
 { config, pkgs, ... }:
 
-{
+let
+    flakeDirectory = "~/.dotfiles/";
+in {
     programs.bash = {
         enable = true;
         shellAliases = {
             la = "ls -lA";
             nixclean = "doas nix-collect-garbage -d";
-            nixbuild = "doas nixos-rebuild switch --flake ~/.dotfiles/";
-            nixtest = "echo 'WARNING: This build is not persistent'; doas nixos-rebuild test --flake ~/.dotfiles/";
-            homebuild = "home-manager switch --flake ~/.dotfiles/";
+            nixbuild = "doas nixos-rebuild switch --flake ${flakeDirectory}";
+            nixtest = "echo 'WARNING: This build is not persistent'; doas nixos-rebuild test --flake ${flakeDirectory}";
+            homebuild = "home-manager switch --flake ${flakeDirectory}";
             homeclean = "home-manager expire-generations now";
-            update = "nix flake update ~/.dotfiles/";
+            update = "doas nix flake update ${flakeDirectory} && nix flake update ${flakeDirectory} && echo 'Done ! Don\'t forget to rebuild NixOS !'";
         };
 
         historyIgnore = [
