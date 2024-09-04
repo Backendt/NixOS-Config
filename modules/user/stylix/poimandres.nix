@@ -8,7 +8,7 @@
     ];
 
     stylix = {
-        image = ./wallpapers/mountain.jpg;
+        image = ./wallpapers/night-nature.jpg;
         base16Scheme = ./styles/poimandres.yaml;
 
         opacity = {
