@@ -44,6 +44,8 @@
             mat = home-manager.lib.homeManagerConfiguration {
                 pkgs = nixpkgs.legacyPackages.${system}; 
                 modules = [
+                    # Make unstable packages accessible with pkgs.unstable
+                    ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
                     stylix.homeManagerModules.stylix
                     ./presets/hyprland-desktop/userConfig.nix
                 ];
