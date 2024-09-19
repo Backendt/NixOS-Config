@@ -105,6 +105,11 @@ in {
                         iconUpdateURL = "https://mynixos.com/favicon.ico";
                         definedAliases = [ "@nix" ];
                     };
+                    "Archwiki" = {
+                        urls = [{ template = "https://wiki.archlinux.org/index.php?search={searchTerms}"; }];
+                        iconUpdateURL = "https://wiki.archlinux.org/favicon.ico";
+                        definedAliases = [ "@a" ];
+                    };
                 };
             };
 
