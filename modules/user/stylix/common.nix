@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
     stylix = {
@@ -17,5 +17,12 @@
                 name = "TeX Gyre Heros";
             };
         };
+    };
+
+    home.pointerCursor = lib.mkForce {
+        gtk.enable = true;
+        package = pkgs.phinger-cursors;
+        name = "phinger-cursors-light";
+        size = 32;
     };
 }
