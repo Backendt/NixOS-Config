@@ -10,12 +10,14 @@
                 {
                     matches = [
                         {
-                            node.name = "alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.analog-stereo-input"
+                            node.name = "~alsa_input.*"
                         }
                     ]
                     actions = {
                         update-props = {
                             audio.position = "MONO"
+                            audio.channels = "1"
+                            node.description = "PCM2902 Audio Codec Analog Mono"
                         }
                     }
                 }
