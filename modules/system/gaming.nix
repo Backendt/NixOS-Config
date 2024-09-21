@@ -12,10 +12,7 @@
     programs.gamemode.enable = true;
 
     environment.systemPackages = with pkgs; [
-        r2modman
-        # Video editing
-        kdePackages.kdenlive
-        glaxnimate # Needed for kdenlive
-        prismlauncher
+        r2modman # Unity modding
+        prismlauncher # Minecraft launcher
     ];
 }

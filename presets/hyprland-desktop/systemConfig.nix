@@ -78,16 +78,9 @@
     samba
     neovim
     git
-    feh
-    yt-dlp
-    vlc
-    vesktop
-    spotify
     libnotify
     killall
     pfetch-rs
-    gimp
-    playerctl # Controls media players with keybindings
     ntfs3g # Used to mount NTFS
   ];
 
