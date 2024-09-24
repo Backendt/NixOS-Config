@@ -3,7 +3,7 @@
 {
     home.packages = with pkgs; [
         yt-dlp
-        kdePackages.kdenlive
-        glaxnimate # Needed for kdenlive
+        unstable.kdePackages.kdenlive
+        unstable.glaxnimate # Needed for kdenlive
     ];
 }
