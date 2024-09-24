@@ -5,6 +5,7 @@
         ./common.nix
         ./overrides/poimandres/waybar.nix
         ./overrides/poimandres/neovim.nix
+        ./overrides/poimandres/wofi.nix
     ];
 
     stylix = {
