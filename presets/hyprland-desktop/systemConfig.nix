@@ -23,6 +23,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.tmp.cleanOnBoot = true;
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -73,11 +74,10 @@
 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
+    git
     doas
     wget
     samba
-    neovim
-    git
     libnotify
     killall
     pfetch-rs
