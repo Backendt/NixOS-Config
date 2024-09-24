@@ -14,6 +14,7 @@
         ../../modules/user/programming.nix
         ../../modules/user/video-editing.nix
         ../../modules/user/pentest.nix
+        ../../modules/user/git.nix
     ];
 
     nixpkgs.config.allowUnfree = true;
