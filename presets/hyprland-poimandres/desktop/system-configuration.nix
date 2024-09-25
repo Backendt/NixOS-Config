@@ -3,9 +3,9 @@
 {
   imports =
     [
-      ../bundles/system/desktop-base.nix
-      ../bundles/system/gaming.nix
-      ../../modules/system/hyprland.nix
+      ../../bundles/system/desktop-base.nix
+      ../../bundles/system/gaming.nix
+      ../../../modules/system/hyprland.nix
     ];
 
   # Set desktop replay monitor
