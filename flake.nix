@@ -14,6 +14,8 @@
 
     outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
     let
+        current-preset = ./presets/hyprland-desktop;
+
         system = "x86_64-linux";
         overlay-unstable = final: prev: { # Make an overlay for nixpkgs-unstable, allowing unfree packages
             unstable = import nixpkgs-unstable {
@@ -33,7 +35,7 @@
                     # Make unstable packages accessible with pkgs.unstable
                     ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
                     stylix.nixosModules.stylix
-                    ./presets/hyprland-desktop/systemConfig.nix
+                    (current-preset + "/system-configuration.nix")
                 ];
             };
 
@@ -48,7 +50,7 @@
                     # Make unstable packages accessible with pkgs.unstable
                     ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
                     stylix.homeManagerModules.stylix
-                    ./presets/hyprland-desktop/userConfig.nix
+                    (current-preset + "/home-configuration.nix")
                 ];
             };
         };
