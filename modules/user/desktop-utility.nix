@@ -6,7 +6,7 @@
         onlyoffice-bin
         vlc
         feh
-        vesktop
+        unstable.vesktop
         spotify
         playerctl
     ];
