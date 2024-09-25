@@ -10,7 +10,7 @@ in {
             nixclean = "doas nix-collect-garbage -d";
             nixbuild = "doas nixos-rebuild switch --flake ${flakeDirectory}";
             nixtest = "echo 'WARNING: This build is not persistent'; doas nixos-rebuild test --flake ${flakeDirectory}";
-            homebuild = "home-manager switch --flake ${flakeDirectory}";
+            homebuild = "home-manager switch --flake ${flakeDirectory} -b old";
             homeclean = "home-manager expire-generations now";
             update = "doas nix flake update ${flakeDirectory} && nix flake update ${flakeDirectory} && echo 'Done ! Please rebuild NixOS.'";
         };

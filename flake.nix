@@ -42,7 +42,6 @@
         };
 
         # Home config
-        home-manager.backupFileExtension = "hm-old";
         homeConfigurations = {
             mat = home-manager.lib.homeManagerConfiguration {
                 pkgs = nixpkgs.legacyPackages.${system}; 
