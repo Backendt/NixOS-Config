@@ -2,6 +2,11 @@
 { config, pkgs, ... }:
 
 {
+    imports = [
+        ./keybindings.nix
+        ./visual.nix
+    ];
+
     wayland.windowManager.hyprland = {
         enable = true;
         settings = {
