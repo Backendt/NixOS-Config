@@ -10,6 +10,9 @@
     wayland.windowManager.hyprland = {
         enable = true;
         settings = {
+            env = [
+                "NIXOS_OZONE_WL,1"
+            ];
 
             # Allow tearing for steam games
             general.allow_tearing = true;
