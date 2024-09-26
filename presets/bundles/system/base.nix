@@ -60,7 +60,10 @@
     #   PACKAGES
     #
 
-    imports = [ ../../../modules/system/doas.nix ];
+    imports = [
+        ../../../modules/system/doas.nix
+        ../../../modules/system/firewall.nix
+    ];
 
     # Allow unfree packages (Forgive me Richard)
     nixpkgs.config.allowUnfree = true;
