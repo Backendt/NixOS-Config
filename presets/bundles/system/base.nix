@@ -14,9 +14,6 @@
         tmp.cleanOnBoot = true;
     };
 
-    # Enable networking
-    networking.networkmanager.enable = true;
-
     # Locale stuff
     time.timeZone = "Europe/Paris";
     i18n = {
