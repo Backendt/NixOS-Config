@@ -12,5 +12,10 @@
     networking.hostName = "nixos-laptop";
 
     # Enable wifi
-    networking.wireless.enable = true;
+    networking = {
+        wireless = {
+            iwd.enable = true;
+        };
+        networkmanager.wifi.backend = "iwd";
+    };
 }
