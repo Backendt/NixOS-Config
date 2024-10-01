@@ -43,6 +43,9 @@
     # Disable mouse acceleration in X11
     services.libinput.mouse.accelProfile = "flat";
 
+    # Set cloudflare as DNS
+    networking.nameservers = [ "1.1.1.1" "9.9.9.9"];
+
     # Create user
     users.users.mat = {
         isNormalUser = true;
