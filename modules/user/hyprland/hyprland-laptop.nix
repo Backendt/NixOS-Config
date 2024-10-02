@@ -15,7 +15,10 @@
         misc.vfr = true;
 
         # Invert scrolling direction
-        input.natural_scroll = true;
+        input.touchpad.natural_scroll = true;
+
+        # Disable scaling on XWayland
+        xwayland.force_zero_scaling = true;
     };
 
 }
