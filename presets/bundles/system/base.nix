@@ -45,6 +45,8 @@
 
     # Set cloudflare as DNS
     networking.nameservers = [ "1.1.1.1" "9.9.9.9"];
+    # Make hosts file writable (Edits are not persistent)
+    environment.etc.hosts.mode = "0644";
 
     # Create user
     users.users.mat = {
