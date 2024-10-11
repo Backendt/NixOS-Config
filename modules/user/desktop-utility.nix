@@ -9,5 +9,6 @@
         unstable.vesktop
         spotify
         playerctl
+        brightnessctl
     ];
 }
