@@ -25,7 +25,7 @@
     in [
         (modules + "/bash.nix")
         (modules + "/desktop-utility.nix")
-        (modules + "/neovim.nix")
+        (modules + "/nixvim.nix")
         (modules + "/firefox.nix")
         (modules + "/kitty/kitty.nix")
         (modules + "/git.nix")

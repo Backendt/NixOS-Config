@@ -6,13 +6,20 @@
         nixpkgs.url = "nixpkgs/nixos-24.05";
         nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
         
-        home-manager.url = "github:nix-community/home-manager/release-24.05";
-        home-manager.inputs.nixpkgs.follows = "nixpkgs";
+        home-manager = {
+            url = "github:nix-community/home-manager/release-24.05";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
+        nixvim = {
+            url = "github:nix-community/nixvim/nixos-24.05";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
         stylix.url = "github:danth/stylix";
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, stylix, ... }@inputs:
+    outputs = { nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
     let
         current-preset = ./presets/hyprland-poimandres;
 
@@ -34,7 +41,7 @@
                 modules = [
                     # Make unstable packages accessible with pkgs.unstable
                     ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
-                    stylix.nixosModules.stylix
+                    # Preset config
                     (current-preset + "/desktop/system-configuration.nix")
                 ];
             };
@@ -46,7 +53,7 @@
                 modules = [
                     # Make unstable packages accessible with pkgs.unstable
                     ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
-                    stylix.nixosModules.stylix
+                    # Preset config
                     (current-preset + "/laptop/system-configuration.nix")
                 ];
             };
@@ -57,20 +64,22 @@
         homeConfigurations = {
             "mat@nixos-desktop" = home-manager.lib.homeManagerConfiguration {
                 pkgs = nixpkgs.legacyPackages.${system}; 
+                extraSpecialArgs = { inherit inputs; };
                 modules = [
                     # Make unstable packages accessible with pkgs.unstable
                     ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
-                    stylix.homeManagerModules.stylix
+                    # Preset config
                     (current-preset + "/desktop/home-configuration.nix")
                 ];
             };
 
             "mat@nixos-laptop" = home-manager.lib.homeManagerConfiguration {
                 pkgs = nixpkgs.legacyPackages.${system}; 
+                extraSpecialArgs = { inherit inputs; };
                 modules = [
                     # Make unstable packages accessible with pkgs.unstable
                     ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
-                    stylix.homeManagerModules.stylix
+                    # Preset config
                     (current-preset + "/laptop/home-configuration.nix")
                 ];
             };
