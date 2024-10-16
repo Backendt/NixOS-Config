@@ -7,6 +7,7 @@
         ./overrides/poimandres/neovim.nix
         ./overrides/poimandres/nixvim.nix
         ./overrides/poimandres/wofi.nix
+        ./overrides/poimandres/vesktop.nix
     ];
 
     stylix = {
