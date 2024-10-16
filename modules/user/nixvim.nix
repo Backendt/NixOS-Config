@@ -12,12 +12,12 @@
             lsp = {
                 enable = true;
                 servers = {
-                    eslint.enable = true; # JavaScript
+                    #eslint.enable = true; # JavaScript
                     dockerls.enable = true;
-                    html.enable = true;
-                    cssls.enable = true;
+                    #html.enable = true;
+                    #cssls.enable = true;
                     bashls.enable = true;
-                    jsonls.enable = true;
+                    #jsonls.enable = true;
                     nixd.enable = true; # Nix
                     pyright.enable = true; # Python
                     sqls.enable = true; # SQL
