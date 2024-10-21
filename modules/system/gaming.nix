@@ -14,5 +14,6 @@
     environment.systemPackages = with pkgs; [
         r2modman # Unity modding
         prismlauncher # Minecraft launcher
+        dotnet-sdk_8 # tModLoader dependency
     ];
 }
