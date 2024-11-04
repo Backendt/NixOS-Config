@@ -52,7 +52,7 @@
     users.users.mat = {
         isNormalUser = true;
         description = "mat";
-        extraGroups = [ "networkmanager" "wheel" ];
+        extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
 
     # Enable Flakes
@@ -68,6 +68,7 @@
     imports = [
         ../../../modules/system/doas.nix
         ../../../modules/system/firewall.nix
+        ../../../modules/system/docker.nix
     ];
 
     # Allow unfree packages (Forgive me Richard)
