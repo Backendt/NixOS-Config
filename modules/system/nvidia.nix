@@ -2,7 +2,7 @@
 
 { 
     # Install vaapi driver
-    environment.systemPackages = [ pkgs.nvidia-vaapi-driver ]; # Might be better using pkgs.unstable    
+    environment.systemPackages = [ pkgs.unstable.nvidia-vaapi-driver ];    
 
     # Switch to unstable linux kernel to have latest nvidia drivers
     boot.kernelPackages = pkgs.unstable.linuxPackages;
@@ -45,5 +45,5 @@
 
     # Load kernel module
     boot.initrd.kernelModules = [ "nvidia" ];
-    boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+    #boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
 }
