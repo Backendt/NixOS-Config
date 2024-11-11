@@ -8,6 +8,10 @@
         defaultEditor = true;
         vimAlias = true;
 
+        globals = {
+            mapleader = " ";
+        };
+
         plugins = {
             lsp = {
                 enable = true;
@@ -26,6 +30,10 @@
                         installCargo = true;
                         installRustc = true;
                     };
+                };
+                keymaps.diagnostic = {
+                    "<leader><Right>" = "goto_next";
+                    "<leader><Left>" = "goto_prev";
                 };
             };
             
