@@ -5,6 +5,7 @@
         ./desktop-hardware-configuration.nix
         ./base.nix
         ../../../modules/system/nvidia.nix
+        ../../../modules/system/razer.nix
         ../../../modules/system/pipewire/desktop-pipewire.nix
     ];
 
