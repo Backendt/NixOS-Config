@@ -6,5 +6,9 @@
         python311Packages.requests
         jetbrains.idea-community
         jdk
+        cargo
+        rustc
+        gcc
+        rustfmt
     ];
 }
