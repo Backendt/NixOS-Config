@@ -13,7 +13,7 @@
     home.homeDirectory = "/home/mat";
 
     # Check home manager release notes before changing the version
-    home.stateVersion = "24.05";
+    home.stateVersion = "24.11";
     programs.home-manager.enable = true;
 
     #

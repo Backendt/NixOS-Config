@@ -59,7 +59,7 @@
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     # System version
-    system.stateVersion = "24.05";
+    system.stateVersion = "24.11";
 
     #
     #   PACKAGES
@@ -67,6 +67,7 @@
 
     imports = [
         ../../../modules/system/doas.nix
+        ../../../modules/system/git.nix
         ../../../modules/system/firewall.nix
         ../../../modules/system/docker.nix
     ];
@@ -75,7 +76,6 @@
     nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
-        git
         doas
         wget
         samba

@@ -12,7 +12,7 @@ in {
             nixtest = "echo 'WARNING: This build is not persistent'; doas nixos-rebuild test --flake ${flakeDirectory}";
             homebuild = "home-manager switch --flake ${flakeDirectory} -b old";
             homeclean = "home-manager expire-generations now";
-            update = "doas nix flake update ${flakeDirectory} && nix flake update ${flakeDirectory} && echo 'Done ! Please rebuild NixOS.'";
+            update = "doas nix flake update --flake ${flakeDirectory} && nix flake update --flake ${flakeDirectory} && echo 'Done ! Please rebuild NixOS.'";
         };
 
         historyIgnore = [

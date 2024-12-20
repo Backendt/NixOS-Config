@@ -9,7 +9,7 @@
     wayland.windowManager.hyprland.settings = {
         # Disable battery hungry effects
         decoration = {
-            drop_shadow = false;
+            shadow.enabled = false;
             blur.enabled = lib.mkForce false;
         };
         misc.vfr = true;

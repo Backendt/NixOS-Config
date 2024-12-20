@@ -27,7 +27,7 @@ git clone https://github.com/Backendt/NixOS-Config.git ~/.dotfiles
 Install [standalone Home Manager on a Nix Flake](https://nix-community.github.io/home-manager/index.xhtml#sec-flakes-standalone):
 (The command may change in the future)
 ```sh
-nix --experimental-features "nix-command flakes" run home-manager/release-24.05 -- switch --flake ~/.dotfiles -b old
+nix --experimental-features "nix-command flakes" run home-manager/release-24.11 -- switch --flake ~/.dotfiles -b old
 ```
 
 Build the system:

@@ -10,5 +10,6 @@
         rustc
         gcc
         rustfmt
+        vscodium
     ];
 }

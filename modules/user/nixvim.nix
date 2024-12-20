@@ -20,7 +20,7 @@
                     nixd.enable = true; # Nix
                     pyright.enable = true; # Python
                     sqls.enable = true; # SQL
-                    rust-analyzer = {
+                    rust_analyzer = {
                         enable = true;
                         installCargo = false;
                         installRustc = false;
@@ -45,7 +45,7 @@
             # Highlighting
             treesitter = {
                 enable = true;
-                indent = true;
+                settings.indent.enable = true;
             };
 
             # Completion
