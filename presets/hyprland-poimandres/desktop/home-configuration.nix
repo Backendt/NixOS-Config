@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ ... }:
 
 {
     imports = [
@@ -6,5 +6,6 @@
         ../../bundles/user/hyprland-desktop.nix
         ../../../modules/user/stylix/poimandres.nix
         ../../../modules/user/video-editing.nix
+        ../../../modules/user/easyeffects
     ];
 }

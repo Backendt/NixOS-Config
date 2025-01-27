@@ -10,4 +10,7 @@
 
   # Set desktop replay monitor
   programs.gpu-screen-recorder-replay.monitor = "DP-1";
+
+  # Required by easy effects
+  programs.dconf.enable = true;
 }
