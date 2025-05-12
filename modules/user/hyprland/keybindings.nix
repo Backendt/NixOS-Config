@@ -12,6 +12,7 @@
             "$mod + SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
             ", Print, exec, grim - | wl-copy"
             "$mod, Escape, exit"
+            "$mod, L, exec, hyprlock"
 
             # Replay
             "ALT, twosuperior, exec, replay-save"
