@@ -58,6 +58,18 @@
                 ];
             };
 
+	    # Work Laptop
+            nixos-work = nixpkgs.lib.nixosSystem {
+            	inherit system;
+		specialArgs = { inherit inputs; };
+		modules = [
+		    # Make unstable packages accessible with pkgs.unstable
+		    ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
+		    # Preset config
+                    (current-preset + "/work-laptop/system-configuration.nix")
+		];
+	    };
+
         };
 
         # Home config
@@ -83,6 +95,17 @@
                     (current-preset + "/laptop/home-configuration.nix")
                 ];
             };
+
+	    "mat@nixos-work" = home-manager.lib.homeManagerConfiguration {
+	        pkgs = nixpkgs.legacyPackages.${system};
+		extraSpecialArgs = { inherit inputs; };
+		modules = [
+		     # Make unstable packages accessible with pkgs.unstable
+		     ({config, pkgs, ...}: { nixpkgs.overlays = [overlay-unstable]; })
+		     # Preset config
+		     (current-preset + "/work-laptop/home-configuration.nix")
+		];
+	    };
         };
     };
 }

@@ -8,6 +8,8 @@
       ../../../modules/system/hyprland.nix
     ];
 
+  networking.hostName = "nixos-desktop";
+
   # Set desktop replay monitor
   programs.gpu-screen-recorder-replay.monitor = "DP-1";
 

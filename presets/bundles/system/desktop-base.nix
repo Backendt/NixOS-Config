@@ -9,9 +9,6 @@
         ../../../modules/system/pipewire/desktop-pipewire.nix
     ];
 
-    # Hostname (used in flake.nix !)
-    networking.hostName = "nixos-desktop";
-
     # Enable wired network
     networking.networkmanager.enable = true;
 }
