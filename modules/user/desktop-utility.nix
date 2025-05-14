@@ -8,6 +8,7 @@
         feh
         unstable.vesktop
         spotify
+        chromium
         playerctl
         brightnessctl
     ];
