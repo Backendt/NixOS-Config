@@ -85,8 +85,13 @@
             };
 
             battery = {
+                interval = 10;
                 format = "{capacity}% {icon}";
-                format-icons = ["" "" "" "" ""];
+                format-charging = "{capacity}% {icon}";
+                format-icons = {
+                    discharging = ["" "" "" "" ""];
+                    charging = "";
+                };
                 states = {
                     critical = 15;
                 };
